@@ -1,0 +1,23 @@
+{
+  "name": "thithu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phamhuyphan/ThiThu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phamhuyphan/ThiThu/issues"
+  },
+  "homepage": "https://github.com/phamhuyphan/ThiThu#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
