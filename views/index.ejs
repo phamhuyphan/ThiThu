@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <H1>Pham Huy Phan</H1>
+    <form action="/delete" method="post" enctype="multipart/form-data">
+        <table style="border: solid 1px red;">
+            <tr style="border: solid 1px red;">
+                <th style="border: solid 1px red;">STT</th>
+                <th style="border: solid 1px red;">MSSV</th>
+                <th style="border: solid 1px red;">OLD</th>
+                <th style="border: solid 1px red;">CLASS</th>
+                <th style="border: solid 1px red;">SESSION</th>
+            </tr>
+            <% for(let i=0, d=1; i < crms.lenght; i++) {%>
+                <tr style="border: solid 1px red;">
+                    <td style="border: solid 1px red;">
+                        <%=d++%>
+                    </td>
+                    <td style="border: solid 1px red;">
+                        <%=crms[i].ma_sv%>
+                    </td>
+                    <td style="border: solid 1px red;">
+                        <%=crms[i].khoa%>
+                    </td>
+                    <td>
+                        <%=crms[i].lop%>
+                    </td style="border: solid 1px red;">
+
+                    <td style="border: solid 1px red;">
+                        <%=crms[i].tuoi%>
+                    </td>
+                </tr>
+             <%}%>
+        </table>
+    </form>
+</body>
+
+</html>
