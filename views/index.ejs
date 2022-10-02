@@ -5,39 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <H1>Pham Huy Phan</H1>
-    <form action="/delete" method="post" enctype="multipart/form-data">
-        <table style="border: solid 1px red;">
-            <tr style="border: solid 1px red;">
-                <th style="border: solid 1px red;">STT</th>
-                <th style="border: solid 1px red;">MSSV</th>
-                <th style="border: solid 1px red;">OLD</th>
-                <th style="border: solid 1px red;">CLASS</th>
-                <th style="border: solid 1px red;">SESSION</th>
-            </tr>
-            <% for(let i=0, d=1; i < crms.lenght; i++) {%>
-                <tr style="border: solid 1px red;">
-                    <td style="border: solid 1px red;">
-                        <%=d++%>
-                    </td>
-                    <td style="border: solid 1px red;">
-                        <%=crms[i].ma_sv%>
-                    </td>
-                    <td style="border: solid 1px red;">
-                        <%=crms[i].khoa%>
-                    </td>
-                    <td>
-                        <%=crms[i].lop%>
-                    </td style="border: solid 1px red;">
 
-                    <td style="border: solid 1px red;">
-                        <%=crms[i].tuoi%>
-                    </td>
+    <form action="/add" method="get">
+        <input type="submit" name="" id="" value="Thêm vào bảng">
+    </form>
+
+
+    <form action="/delete" method="post" enctype="multipart/form-data">
+        <input type="submit" name="" id="" value="Delete more than ">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>MSSV</th>
+                <th>OLD</th>
+                <th>CLASS</th>
+                <th>SESSION</th>
+            </tr>
+            <% for(let i=0, d=1; i < crms.length; i++) { %>
+                <tr></tr>
+                <td>
+                    <%=d++%>
+                </td>
+                <td>
+                    <%=crms[i].ma_sv%>
+                </td>
+                <td>
+                    <%=crms[i].khoa%>
+                </td>
+                <td>
+                    <%=crms[i].lop%>
+                </td>
+                <td>
+                    <%=crms[i].tuoi%>
+                </td>
+                <td><input type="checkbox" name="<%=crms[i].ma_sv%>"></td>
+                <td>
+                    <form action="/delete" method="post" enctype="multipart/form-data">
+                        <input type="submit" name="<%=crms[i].ma_sv%>" id="" style="background-color: red;"
+                            value="delete">
+                    </form>
+                </td>
                 </tr>
-             <%}%>
+                <% } %>
+
+
         </table>
     </form>
 </body>
